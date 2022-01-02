@@ -10,6 +10,9 @@ def drop_course(self, course_name):
 		# ... reset the <Course>'s professor attribute
 		if course.professor == self:
 			course.professor = None
+		else:
+			course.professor = course.professor
+
 
 	# Search for matching courses in the professor's individual supervised courses and ...
 	if course_name.lower() in self.supervised_courses:

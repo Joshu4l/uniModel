@@ -14,7 +14,7 @@ def teach_course(self, course_name, course_ects, course_domain):
 
 	# if there is a match for the <course_name> input
 	for course in crs.Course.search_instance_by_name(course_name):
-		# Add the student to the course's participants list
+		# Make the professor responsible for that course
 		course.professor = self
 
 	# Check if the course is among the professor's personal course list

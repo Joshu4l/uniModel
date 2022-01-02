@@ -9,8 +9,8 @@ class Course:
     def __init__(self, course_name, course_ects, course_domain):
 
         Course.instances.append(self)
-
         self.course_name = course_name.lower()
+
         # Check if the course already exists, otherwise add its <course_name> to the list of offered courses
         if not course_name.lower() in Course.course_list:
             Course.course_list.append(self.course_name)

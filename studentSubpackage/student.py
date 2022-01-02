@@ -1,8 +1,8 @@
 # OOP-model for a university: student module
 
 # Import the other class modules
-import person as prs
 import course as crs
+import person as prs
 
 # Definition of the <Student> class
 class Student(prs.Person):
@@ -32,7 +32,6 @@ class Student(prs.Person):
         self.exam_scores = {}
         print(f"Student object '{self.first_name} {self.last_name}', age: {self.age}, enrollment number: {self.enrollment_number} was created. \n")
 
-
     # IMPORTED STUDENT-METHODS FROM THE <studentSubpackage>
     from studentSubpackage.check_progress import check_progress
     from studentSubpackage.enroll_into_course import enroll_into_course
@@ -40,22 +39,3 @@ class Student(prs.Person):
     from studentSubpackage.get_grade import get_grade
     from studentSubpackage.check_number_of_attempts import check_number_of_attempts
     from studentSubpackage.accomplish_course import accomplish_course
-
-
-# already working properly
-s12 = Student("Albert", "Josh", 26)
-print(s12.check_progress())
-
-c1 = crs.Course("Python Basics", 5, "Informatics")
-#print(f"participants of {c1.course_name}: {c1.participants}")
-print(s12.enroll_into_course("Python Basics"))
-#print(f"participants of {c1.course_name}: {c1.participants}")
-
-print(c1.participants_count)
-
-s12.write_exam("Python Basics")
-s12.write_exam("Python Basics")
-s12.write_exam("Python Basics")
-
-print(s12.accomplished_courses)
-print(s12.check_progress())
